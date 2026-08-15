@@ -46,14 +46,15 @@ directory as a dev extension.
 2. Clone this repository, if you have not already:
 
    ```sh
-   git clone https://github.com/mkrueger/icy_board
+   git clone https://github.com/mkrueger/zed-ppl
    ```
 
 3. In Zed open the command palette with <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>
    and run `zed: install dev extension`, or open `Extensions` and press
    `Install Dev Extension`.
-4. Select the `zed-ppl` directory of the clone. The first build takes a few
-   seconds; `Extensions` then lists `PPL` as a dev extension.
+4. Select the directory of the clone. The first build takes a few seconds,
+   because the grammar is fetched and compiled as well; `Extensions` then lists
+   `PPL` as a dev extension.
 5. Open a `.pps` file. The status bar shows the language `PPL`, and the language
    server is downloaded on first use.
 
@@ -71,7 +72,11 @@ directory as a dev extension.
 Run `zed: reload extensions` to rebuild it. Changes to the grammar need a pushed
 commit and a new `rev`, see below.
 
-## After a grammar change
+## Where the parts live
 
-The grammar is pulled from this repository by commit. When `crates/tree-sitter-ppl`
-changes, push the commit and update `rev` in `extension.toml`.
+The grammar and the language server belong to
+[IcyBoard](https://github.com/mkrueger/icy_board): the grammar is built from
+`crates/tree-sitter-ppl` at the commit named in `extension.toml`, and the server
+is fetched from the IcyBoard releases. Only the editor glue lives here.
+
+When the grammar changes, push it there and update `rev` in `extension.toml`.

@@ -4,7 +4,7 @@ version = "0.1.0"
 schema_version = 1
 authors = ["Mike Krüger <mkrueger@posteo.de>"]
 description = "PCBoard Programming Language: syntax highlighting and the IcyBoard PPL language server."
-repository = "https://github.com/mkrueger/icy_board"
+repository = "https://github.com/mkrueger/zed-ppl"
 
 [grammars.ppl]
 repository = "https://github.com/mkrueger/icy_board"
