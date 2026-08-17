@@ -1,6 +1,6 @@
 id = "ppl"
 name = "PPL"
-version = "0.1.1"
+version = "0.1.3"
 schema_version = 1
 authors = ["Mike Krüger <mkrueger@posteo.de>"]
 description = "PCBoard Programming Language: syntax highlighting and the IcyBoard PPL language server."
@@ -8,7 +8,7 @@ repository = "https://github.com/mkrueger/zed-ppl"
 
 [grammars.ppl]
 repository = "https://github.com/mkrueger/icy_board"
-rev = "a24de3a5b248e7bd678e0fed02ab613d0e867292"
+rev = "dbf9e40a93e2b0251ae57cf41330096771ade349"
 path = "crates/tree-sitter-ppl"
 
 [language_servers.icyboard-ppl]
